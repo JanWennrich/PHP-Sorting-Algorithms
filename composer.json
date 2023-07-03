@@ -1,8 +1,5 @@
 {
     "require": {
         "php-di/php-di": "^7.0"
-    },
-    "require-dev": {
-        "composer/composer": "^2.5"
     }
 }
