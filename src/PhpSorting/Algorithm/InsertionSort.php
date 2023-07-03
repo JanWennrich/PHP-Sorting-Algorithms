@@ -1,6 +1,6 @@
 <?php
 
-namespace SortingAlgorithm;
+namespace PhpSorting\Algorithm;
 
 class InsertionSort implements SortingAlgorithm
 {
