@@ -11,6 +11,8 @@ class Sorter
     }
 
     public function sort(array $dataset): array {
+        echo "Sorting via " . $this->sortingAlgorithm::class . PHP_EOL;
+
         return $this->sortingAlgorithm->sort($dataset);
     }
 }
