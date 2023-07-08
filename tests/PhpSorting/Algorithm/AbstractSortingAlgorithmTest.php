@@ -19,17 +19,26 @@ abstract class AbstractSortingAlgorithmTest extends TestCase
     #[DataProviderExternal(SortingAlgorithmTestDataProvider::class, 'getUniqueDataset')]
     public function testSortWithUniqueDataset($dataset, $sortedDataset): void
     {
-        self::assertEquals($sortedDataset, $this->sortingAlgorithm->sort($dataset));
+        self::assertEquals(
+            $sortedDataset,
+            $this->sortingAlgorithm->sort($dataset)
+        );
     }
 
     #[DataProviderExternal(SortingAlgorithmTestDataProvider::class, 'getDatasetContainingDuplicates')]
     public function testSortDataset($dataset, $sortedDataset): void
     {
-        self::assertEquals($sortedDataset, $this->sortingAlgorithm->sort($dataset));
+        self::assertEquals(
+            $sortedDataset,
+            $this->sortingAlgorithm->sort($dataset)
+        );
     }
 
     public function testSortWithEmptyDataset(): void
     {
-        self::assertEquals([], $this->sortingAlgorithm->sort([]));
+        self::assertEquals(
+            [],
+            $this->sortingAlgorithm->sort([])
+        );
     }
 }

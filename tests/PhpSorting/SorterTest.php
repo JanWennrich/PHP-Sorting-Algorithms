@@ -16,7 +16,8 @@ class SorterTest extends TestCase
         $sortingAlgorithmStub = $this->createStub(SortingAlgorithm::class);
         $stubReturnValue      = [1, 2, 3];
 
-        $sortingAlgorithmStub->method('sort')->willReturn($stubReturnValue);
+        $sortingAlgorithmStub->method('sort')
+            ->willReturn($stubReturnValue);
 
         $Sorter = new Sorter($sortingAlgorithmStub);
 
@@ -27,10 +28,13 @@ class SorterTest extends TestCase
 
     public function testSortCallsSortingAlgorithmsSortMethod()
     {
-        $testData = [3,2,1];
+        $testData = [3, 2, 1];
 
         $sortingAlgorithmMock = $this->createMock(SortingAlgorithm::class);
-        $sortingAlgorithmMock->expects($this->once())->method('sort')->with($testData);
+
+        $sortingAlgorithmMock->expects($this->once())
+            ->method('sort')
+            ->with($testData);
 
         $Sorter = new Sorter($sortingAlgorithmMock);
         $Sorter->sort($testData);
