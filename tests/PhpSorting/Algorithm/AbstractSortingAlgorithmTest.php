@@ -41,4 +41,13 @@ abstract class AbstractSortingAlgorithmTest extends TestCase
             $this->sortingAlgorithm->sort([])
         );
     }
+
+
+    public function testSortWithDatasetContainingOneElement(): void
+    {
+        self::assertEquals(
+            [1],
+            $this->sortingAlgorithm->sort([1])
+        );
+    }
 }
