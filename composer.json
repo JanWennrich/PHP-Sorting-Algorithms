@@ -17,7 +17,7 @@
         "mockery/mockery": "^1.6"
     },
     "scripts": {
-        "test": "@php vendor/bin/phpunit"
+        "test": "@php vendor/bin/pest"
     },
     "config": {
         "allow-plugins": {
